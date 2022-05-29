@@ -6,6 +6,7 @@
 //
 
 import AVFoundation
+import Photos
 
 enum CameraControllerError: Swift.Error {
     case captureSessionAlreadyRunning
@@ -30,13 +31,30 @@ class CameraController {
     
     func start(delegate: AVCapturePhotoCaptureDelegate, completion: @escaping (Error?) -> ()) {
         self.delegate = delegate
+        checkSavePermission(completion: completion)
         checkPermission(completion: completion)
-
     }
     
+    private func checkSavePermission(completion: @escaping (Error?) -> ()) {
+        switch PHPhotoLibrary.authorizationStatus() {
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({status in
+                guard status == .authorized else {return}
+            })
+        case .restricted:
+            break
+        case .denied:
+            break
+        case .authorized:
+            return
+        case .limited:
+            break
+        @unknown default:
+            break
+        }
+    }
     
-    
-    private func checkPermission (completion: @escaping (Error?) -> ()) {
+    private func checkPermission(completion: @escaping (Error?) -> ()) {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .notDetermined:
             AVCaptureDevice.requestAccess(for: .video) {
