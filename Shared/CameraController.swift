@@ -31,12 +31,10 @@ class CameraController {
     func start(delegate: AVCapturePhotoCaptureDelegate, completion: @escaping (Error?) -> ()) {
         self.delegate = delegate
         checkPermission(completion: completion)
-        checkSavePermission(completion: completion)
+
     }
     
-    private func checkSavePermission(completion: @escaping (Error?) -> ()) {
-        switch [PHPhotoLibrary]
-    }
+    
     
     private func checkPermission (completion: @escaping (Error?) -> ()) {
         switch AVCaptureDevice.authorizationStatus(for: .video) {

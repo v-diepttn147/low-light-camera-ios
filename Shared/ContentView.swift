@@ -23,27 +23,38 @@ struct ContentView: View {
             } else {
                 Color(UIColor.systemBackground)
             }
-            
-            HStack {
-                
-            }
-            
-            VStack {
+            HStack{
                 Spacer()
-                Button(action: {
-                    isCustomCameraViewPresented.toggle()
-                }, label: {
-                    Image(systemName: "camera.fill")
-                        .font(.largeTitle)
-                        .padding()
-                        .background(Color.black)
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                })
-                .padding(.bottom)
-                .sheet(isPresented: $isCustomCameraViewPresented, content: {
-                    CustomCameraView(capturedImage: $capturedImage)
-                })
+                VStack {
+                    Spacer()
+                    Button(action: {
+                        isCustomCameraViewPresented.toggle()
+                    }, label: {
+                        Image(systemName: "camera.fill")
+                            .font(.largeTitle)
+                            .padding()
+                            .background(Color.black)
+                            .foregroundColor(.white)
+                            .clipShape(Circle())
+                            
+                    })
+                    .padding(.bottom)
+                    .sheet(isPresented: $isCustomCameraViewPresented, content: {
+                        CustomCameraView(capturedImage: $capturedImage)
+                    })
+                }
+                Spacer().overlay(
+                    VStack {
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(systemName: "square.and.arrow.down.fill")
+                                .font(.headline)
+                                .padding()
+                                .foregroundColor(.white)
+                                
+                        })
+                    }, alignment: .topTrailing)
             }
         }
     }
