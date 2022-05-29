@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02498BFD2843699200101C5E /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02498BFC2843699200101C5E /* ImageUtil.swift */; };
+		02498BFE2843699200101C5E /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02498BFC2843699200101C5E /* ImageUtil.swift */; };
 		025A4EDB284117A5004AFF37 /* LowLightCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4ECB284117A4004AFF37 /* LowLightCameraApp.swift */; };
 		025A4EDC284117A5004AFF37 /* LowLightCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4ECB284117A4004AFF37 /* LowLightCameraApp.swift */; };
 		025A4EDD284117A5004AFF37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4ECC284117A4004AFF37 /* ContentView.swift */; };
@@ -22,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02498BFC2843699200101C5E /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		025A4ECB284117A4004AFF37 /* LowLightCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowLightCameraApp.swift; sourceTree = "<group>"; };
 		025A4ECC284117A4004AFF37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		025A4ECD284117A5004AFF37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 				025A4ECD284117A5004AFF37 /* Assets.xcassets */,
 				025A4EF1284136AC004AFF37 /* CameraView.swift */,
 				025A4EF7284136EC004AFF37 /* CustomCameraView.swift */,
+				02498BFC2843699200101C5E /* ImageUtil.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -191,6 +195,7 @@
 				025A4EF2284136AC004AFF37 /* CameraView.swift in Sources */,
 				025A4EDD284117A5004AFF37 /* ContentView.swift in Sources */,
 				025A4EF8284136EC004AFF37 /* CustomCameraView.swift in Sources */,
+				02498BFD2843699200101C5E /* ImageUtil.swift in Sources */,
 				025A4EF5284136D0004AFF37 /* CameraController.swift in Sources */,
 				025A4EDB284117A5004AFF37 /* LowLightCameraApp.swift in Sources */,
 			);
@@ -203,6 +208,7 @@
 				025A4EF3284136AC004AFF37 /* CameraView.swift in Sources */,
 				025A4EDE284117A5004AFF37 /* ContentView.swift in Sources */,
 				025A4EF9284136EC004AFF37 /* CustomCameraView.swift in Sources */,
+				02498BFE2843699200101C5E /* ImageUtil.swift in Sources */,
 				025A4EF6284136D0004AFF37 /* CameraController.swift in Sources */,
 				025A4EDC284117A5004AFF37 /* LowLightCameraApp.swift in Sources */,
 			);
