@@ -13,6 +13,12 @@
 		025A4EDE284117A5004AFF37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4ECC284117A4004AFF37 /* ContentView.swift */; };
 		025A4EDF284117A5004AFF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 025A4ECD284117A5004AFF37 /* Assets.xcassets */; };
 		025A4EE0284117A5004AFF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 025A4ECD284117A5004AFF37 /* Assets.xcassets */; };
+		025A4EF2284136AC004AFF37 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4EF1284136AC004AFF37 /* CameraView.swift */; };
+		025A4EF3284136AC004AFF37 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4EF1284136AC004AFF37 /* CameraView.swift */; };
+		025A4EF5284136D0004AFF37 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4EF4284136D0004AFF37 /* CameraController.swift */; };
+		025A4EF6284136D0004AFF37 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4EF4284136D0004AFF37 /* CameraController.swift */; };
+		025A4EF8284136EC004AFF37 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4EF7284136EC004AFF37 /* CustomCameraView.swift */; };
+		025A4EF9284136EC004AFF37 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A4EF7284136EC004AFF37 /* CustomCameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,9 @@
 		025A4ED2284117A5004AFF37 /* LowLightCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LowLightCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025A4ED8284117A5004AFF37 /* LowLightCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LowLightCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025A4EDA284117A5004AFF37 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		025A4EF1284136AC004AFF37 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		025A4EF4284136D0004AFF37 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		025A4EF7284136EC004AFF37 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +63,12 @@
 		025A4ECA284117A4004AFF37 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				025A4EF4284136D0004AFF37 /* CameraController.swift */,
 				025A4ECB284117A4004AFF37 /* LowLightCameraApp.swift */,
 				025A4ECC284117A4004AFF37 /* ContentView.swift */,
 				025A4ECD284117A5004AFF37 /* Assets.xcassets */,
+				025A4EF1284136AC004AFF37 /* CameraView.swift */,
+				025A4EF7284136EC004AFF37 /* CustomCameraView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -176,7 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025A4EF2284136AC004AFF37 /* CameraView.swift in Sources */,
 				025A4EDD284117A5004AFF37 /* ContentView.swift in Sources */,
+				025A4EF8284136EC004AFF37 /* CustomCameraView.swift in Sources */,
+				025A4EF5284136D0004AFF37 /* CameraController.swift in Sources */,
 				025A4EDB284117A5004AFF37 /* LowLightCameraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,7 +200,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025A4EF3284136AC004AFF37 /* CameraView.swift in Sources */,
 				025A4EDE284117A5004AFF37 /* ContentView.swift in Sources */,
+				025A4EF9284136EC004AFF37 /* CustomCameraView.swift in Sources */,
+				025A4EF6284136D0004AFF37 /* CameraController.swift in Sources */,
 				025A4EDC284117A5004AFF37 /* LowLightCameraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +330,8 @@
 				DEVELOPMENT_TEAM = 53SQTS879N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take Photos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Add photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,6 +362,8 @@
 				DEVELOPMENT_TEAM = 53SQTS879N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take Photos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Add photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
