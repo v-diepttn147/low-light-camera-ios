@@ -23,10 +23,23 @@ struct ContentView: View {
             } else {
                 Color(UIColor.systemBackground)
             }
-            HStack{
-                Spacer()
-                VStack {
+            
+            VStack {
+                HStack {
                     Spacer()
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "square.and.arrow.down.fill")
+                            .font(.headline)
+                            .padding()
+                            .foregroundColor(.white)
+                            
+                    })
+                    
+                }
+                Spacer()
+                HStack {
                     Button(action: {
                         isCustomCameraViewPresented.toggle()
                     }, label: {
@@ -43,18 +56,6 @@ struct ContentView: View {
                         CustomCameraView(capturedImage: $capturedImage)
                     })
                 }
-                Spacer().overlay(
-                    VStack {
-                        Button(action: {
-                            
-                        }, label: {
-                            Image(systemName: "square.and.arrow.down.fill")
-                                .font(.headline)
-                                .padding()
-                                .foregroundColor(.white)
-                                
-                        })
-                    }, alignment: .topTrailing)
             }
         }
     }
